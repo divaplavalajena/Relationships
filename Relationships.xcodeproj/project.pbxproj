@@ -159,6 +159,8 @@
 		0CFB89B31B1861EE00946C4E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Fahir Mehovic";
 				TargetAttributes = {
@@ -415,6 +417,7 @@
 				0CFB89DF1B1861EE00946C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CFB89E01B1861EE00946C4E /* Build configuration list for PBXNativeTarget "RelationshipsTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +426,7 @@
 				0CFB89E21B1861EE00946C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
