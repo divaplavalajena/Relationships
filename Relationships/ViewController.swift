@@ -18,7 +18,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        saveData()
         loadData();
+    }
+    
+    func saveData() -> Void {
+        
+        let data = NSEntityDescription.insertNewObjectForEntityForName("Instructor", inManagedObjectContext: context) as! Instructor
+        
+        data.name = "Andrei"
+        data.lastName = "Davis"
+        
+        //let err: NSError?
+        try! context.save()
+        
+        /*
+        if (err != nil) {
+            print("Problem")
+        }
+        */
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +66,12 @@ class ViewController: UIViewController {
     }
     
     func saveCourse(title: String) {
+        
+        let course = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context) as! Course
+        course.title = title
+        course.instructor = instructors[0]
+        
+        try! context.save()
     
     }
 

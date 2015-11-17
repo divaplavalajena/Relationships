@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Course" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
+    <entity name="Course" representedClassName=".Course" syncable="YES">
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="instructor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Instructor" inverseName="course" inverseEntity="Instructor" syncable="YES"/>
     </entity>
-    <entity name="Instructor" syncable="YES">
+    <entity name="Instructor" representedClassName=".Instructor" syncable="YES">
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="course" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Course" inverseName="instructor" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Instructor" positionX="-63" positionY="-18" width="128" height="75"/>
-        <element name="Course" positionX="-54" positionY="-9" width="128" height="60"/>
+        <element name="Course" positionX="-315" positionY="-144" width="128" height="73"/>
+        <element name="Instructor" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
